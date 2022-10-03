@@ -1,7 +1,7 @@
 # Einblick Support Tools
 
 
-## Tool dump.sh:
+## Tool einblick-dump.sh:
 
 Utility to export Einblick data collection to a ZIP file
 
@@ -10,7 +10,7 @@ Utility to export Einblick data collection to a ZIP file
 /app/support/einblick-dump.sh MONGO_COLLECTION_NAME<br>
 MONGO_COLLECTION_NAME– Name of the MongoDB collection inside the Einblick DB<br>
 
-## Tool s3send.sh:
+## Tool einblick-s3send.sh:
 
 Utility to send a file to the specified Einblick S3 bucket folder.
 
@@ -22,7 +22,7 @@ USER_SECRET – Amazon User Secret<br>
 S3_FOLDER – Destination Folder in S3 bucket<br>
 FILE – File to send to the S3 folder<br>
 
-## Tool mgosend.sh:
+## Tool einblick-mgosend.sh:
 
 Utility to send a Einblick data collection directly to the Einblick S3 extract bucket folder.
 
