@@ -1,10 +1,6 @@
 # Einblick Support Tools
 
 
-## Tools Location on server oiriaft0011 :
-
-/app/support
-
 ## Tool dump.sh:
 
 Utility to export Einblick data collection to a ZIP file
