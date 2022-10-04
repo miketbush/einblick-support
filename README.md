@@ -1,7 +1,7 @@
 # Einblick Support Tools
 ![](screenshots/eccoselect-logo.png)
 
-### Ecco Select presents a tool set created to facilitate the collection of support data from a on-prem Einblick install. The support data, support-bundle, is then compressed and sent to an S3 bucket, typically provided by Einblick for diagnostic data. This data will include internal MongoDB collection, if desired.  Additionally, the tools include a mini-monitor to collect data immediately, should a UI crash occur and a web view of the log data. This web view allows on-site staff to gain insight into the issues encountered and possible solutions as well.
+### Ecco Select presents a tool set created to facilitate the collection of support data from a on-prem Einblick install. The support data, support-bundle, is then compressed and sent to an S3 bucket, typically provided by Einblick for diagnostic data. This data will include any number of internal MongoDB collections, if desired.  Additionally, the tools include a mini-monitor to collect data immediately, should a UI crash occur and a web view of the log data. This web view allows on-site staff to gain insight into the issues encountered and possible solutions as well.
 
 
 ## Tool einblick-dump.sh:
