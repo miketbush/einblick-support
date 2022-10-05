@@ -4,6 +4,23 @@
 ### Ecco Select presents a tool set created to facilitate the collection of support data from a on-prem Einblick install. The support data, support-bundle, is then compressed and sent to an S3 bucket, typically provided by Einblick for diagnostic data. This data will include any number of internal MongoDB collections, if desired.  Additionally, the tools include a mini-monitor to collect data immediately, should a UI crash occur and a web view of the log data. This web view allows on-site staff to gain insight into the issues encountered and possible solutions as well.
 
 
+## Requirements:
+
+### Krew Tools:
+
+#### Installation
+curl https://krew.sh/support-bundle | bash
+if you don't want it installed in ~/.krew, create symlink at ~/.krew pointed elsewhere first.
+
+### MongoDB Tools
+
+#### Installation
+An example install of mongo tools placing them in /app/support/mongotools:
+  wget https://fastdl.mongodb.org/tools/db/mongodb-database-tools-rhel70-x86_64-100.6.0.tgz
+  tar -xzf mongodb-database-tools-rhel70-x86_64-100.6.0.tgz
+  mv mongodb-database-tools-rhel70-x86_64-100.6.0 /app/support/mongotools
+
+
 ## Tool einblick-dump.sh:
 
 Utility to export Einblick data collection to a ZIP file
