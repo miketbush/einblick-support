@@ -9,16 +9,19 @@
 ### Krew Tools:
 
 #### Installation
-curl https://krew.sh/support-bundle | bash
-if you don't want it installed in ~/.krew, create symlink at ~/.krew pointed elsewhere first.
+curl https://krew.sh/support-bundle | bash<br>
+if you don't want it installed in ~/.krew, create symlink at ~/.krew pointed elsewhere first.<br>
 
 ### MongoDB Tools
 
 #### Installation
-An example install of mongo tools placing them in /app/support/mongotools:
-  wget https://fastdl.mongodb.org/tools/db/mongodb-database-tools-rhel70-x86_64-100.6.0.tgz
-  tar -xzf mongodb-database-tools-rhel70-x86_64-100.6.0.tgz
-  mv mongodb-database-tools-rhel70-x86_64-100.6.0 /app/support/mongotools
+An example install of mongo tools placing them in /app/support/mongotools:<br>
+  wget https://fastdl.mongodb.org/tools/db/mongodb-database-tools-rhel70-x86_64-100.6.0.tgz<br>
+  tar -xzf mongodb-database-tools-rhel70-x86_64-100.6.0.tgz<br>
+  mv mongodb-database-tools-rhel70-x86_64-100.6.0 /app/support/mongotools<br>
+
+
+## Tools:
 
 
 ## Tool einblick-dump.sh:
