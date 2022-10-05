@@ -6,7 +6,7 @@
 
 ## Requirements:
 
-### Krew Tools:
+### Krew Tools
 
 #### Installation
 curl https://krew.sh/support-bundle | bash<br>
