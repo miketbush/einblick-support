@@ -3,10 +3,8 @@
 # Author: Mike Bush
 # Company: ECCO Select
 # Description: Send File to S3 bucket/folder
-#
-# Thanks to:
-# https://stackoverflow.com/questions/1496453/uploading-to-amazon-s3-using-curl-libcurl
-#
+# 
+#export KUBECONFIG=/etc/kubernetes/kubelet.conf
 export KUBECONFIG="/etc/kubernetes/admin.conf"
 
 yyyymmdd=`date +%Y%m%d`
@@ -49,12 +47,12 @@ echo "-------------------------------------------------------"
 #
 # send file and
 # calculate the signing key
-#
+
 DateKey=`echo -n "${yyyymmdd}" | openssl sha256 -hex -hmac "AWS4${s3SecretKey}" | sed 's/.* //'`
 DateRegionKey=`echo -n "${bucketLocation}" | openssl sha256 -hex -mac HMAC -macopt hexkey:${DateKey} | sed 's/.* //'`
 DateRegionServiceKey=`echo -n "s3" | openssl sha256 -hex -mac HMAC -macopt hexkey:${DateRegionKey} | sed 's/.* //'`
 SigningKey=`echo -n "aws4_request" | openssl sha256 -hex -mac HMAC -macopt hexkey:${DateRegionServiceKey} | sed 's/.* //'`
-# HMAC
+# then, once more a HMAC for the signature
 signature=`echo -en ${stringToSign} | openssl sha256 -hex -mac HMAC -macopt hexkey:${SigningKey} | sed 's/.* //'`
 
 authoriz="Authorization: AWS4-HMAC-SHA256 Credential=${s3AccessKey}/${yyyymmdd}/${bucketLocation}/s3/aws4_request, SignedHeaders=content-length;host;x-amz-content-sha256;x-amz-date, Signature=${signature}"
