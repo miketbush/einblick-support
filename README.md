@@ -45,6 +45,21 @@ USER_SECRET – Amazon User Secret<br>
 S3_FOLDER – Destination Folder in S3 bucket<br>
 FILE – File to send to the S3 folder<br>
 
+### Tool s3receive.sh:
+
+Utility to download a file from the specified Einblick S3 bucket folder.
+
+### Arguments:
+
+ /app/support/s3sreceive.sh USER_KEY USER_SECRET S3_RES_URL AWS_REGION FILE
+
+USER_KEY – Amazon User Key<br>
+USER_SECRET – Amazon User Secret<br>
+S3_RES_URL – Source S3 URL (s3://my-bucket-name/folder/resource.name)<br>
+AWS_REGION – AWS S3 Bucket location (us-gov-west-1)<br>
+FILE – Destination file<br>
+
+
 ### Tool einblick-mgosend.sh:
 
 Utility to send a Einblick data collection directly to the Einblick S3 extract bucket folder.
